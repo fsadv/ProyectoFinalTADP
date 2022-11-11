@@ -11,6 +11,13 @@ namespace ProyectoFinalTADP.Controllers
 {
     public class UsuariosController : Controller
     {
+
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         // GET: Usuarios
         public ActionResult Index()
         {
