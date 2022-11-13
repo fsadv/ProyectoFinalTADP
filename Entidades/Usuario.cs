@@ -35,4 +35,7 @@ namespace Entidades
         public long Id { get; set; }
 
     }
+
+ 
+
 }
