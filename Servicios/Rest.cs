@@ -15,7 +15,7 @@ namespace Servicios
 
         public string Method { get; set; }
 
-        public Rest(string url, string data = "",string method="")
+        public Rest(string url, string data = "", string method = "GET")
         {
             URL = url;
             Data = data;
