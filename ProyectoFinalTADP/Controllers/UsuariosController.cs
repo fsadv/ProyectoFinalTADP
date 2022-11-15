@@ -20,6 +20,26 @@ namespace ProyectoFinalTADP.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        public ActionResult Auth(string mail, string password)
+        {
+
+            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
+
+            if(listUsuarios.Any(x => x.Email == mail && x.Clave == password))
+            {
+                return RedirectToAction("Index", "Home");
+            } else
+            {
+                return RedirectToAction("Login", "Usuarios");
+            }
+            
+       
+        }
+
+
+
         // GET: Usuarios
         public ActionResult Index()
         {
