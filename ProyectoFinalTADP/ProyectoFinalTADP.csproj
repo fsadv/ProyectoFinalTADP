@@ -273,6 +273,7 @@
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Usuarios\Login.cshtml" />
+    <Content Include="Views\Shared\_Contacto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
@@ -282,6 +283,10 @@
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{2f43d722-9621-45bd-b830-63816f3eee0f}</Project>
       <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{df468ade-d09a-448a-a83a-813c853910b3}</Project>
+      <Name>Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
