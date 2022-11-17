@@ -21,6 +21,12 @@ namespace ProyectoFinalTADP.Controllers
         }
 
 
+        /*
+         Método encargado de validar la información del formulario de Login, en el cual la misma se cruza
+         con la data de los usuarios almacenados en MockApi. En caso de encontrar coincidencias, redirige a 
+         la pantalla de inicio. Caso contrario, vuelve a cargar la vista.         
+         */
+
         [HttpPost]
         public ActionResult Auth(string mail, string password)
         {
@@ -39,6 +45,10 @@ namespace ProyectoFinalTADP.Controllers
         }
 
 
+        /*
+         Vista del ABM de usuarios. En la misma se realiza un consumo de la lista de usuarios 
+         en Mockapi y se muestran sus datos en un formato de tabla.
+         */
 
         // GET: Usuarios
         public ActionResult Index()
