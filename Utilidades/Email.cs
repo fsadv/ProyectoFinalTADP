@@ -26,6 +26,10 @@ namespace Utilidades
         /// <param name="Port">Puerto del servidor de correo</param>
         /// <param name="enableSsl">habilitado el SSL</param>
         /// <returns></returns>
+        /// 
+
+
+
         public static bool EnviarEmail   //Metodo de envío de email
             (
                 string from,
@@ -46,7 +50,7 @@ namespace Utilidades
 
             try
             {
-                if (ValidarEmail(from, to, fromName, toName, fromPassword, subject, body)) //Metodo para válidar que los campos del email no estén vacíos
+                if (ValidarEmail(from, to, fromName, toName, fromPassword, subject, body)) 
                 {
                     MailAddress fromAddress = new MailAddress(from, fromName);
                     MailAddress toAddress = new MailAddress(to, toName);
@@ -81,6 +85,12 @@ namespace Utilidades
                 return false;
             }
         }
+
+
+        /*
+         * El metodo ValidarEmail comprueba que ningun campo del mismo esté vacío, 
+         * con fin de evitar errores en su procesamiento.
+         */
 
         private static bool ValidarEmail(string from, string to, string fromName, string toName, string fromPassword, string subject, string body)
         {

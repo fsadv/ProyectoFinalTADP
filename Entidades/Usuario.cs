@@ -10,6 +10,12 @@ namespace Entidades
     public class Usuario
     {
 
+        /*
+         La entidad Usuario se encarga de realizar el mapeo de la información recibida
+         desde MockApi en una clase, con fin de poder dar tratamiento a esa data 
+         como un objeto.
+         */
+
         [JsonProperty("Nombre")]
         public string Nombre { get; set; }
 
