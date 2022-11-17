@@ -132,6 +132,15 @@ namespace ProyectoFinalTADP.Controllers
             }
         }
 
+
+        /*
+         En el siguiente método se procesa el formulario de Contacto de la página web. 
+         El mismo tiene como fin enviar las consultas de los posibles clientes a un email
+         que se encarga de la distribución a los integrantes del equipo.
+         Al no tener ese mail creado, se utiliza el mismo remitente y destinatario, con fines
+         de comprobar su funcionamiento.
+         */
+
         [HttpPost]
         public ActionResult ProcesarForm(string name, string email, string subject, string message) //Metodo que procesa el formulario de envio de correo
         {
