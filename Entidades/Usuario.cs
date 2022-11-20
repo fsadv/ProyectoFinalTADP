@@ -15,33 +15,41 @@ namespace Entidades
          desde MockApi en una clase, con fin de poder dar tratamiento a esa data 
          como un objeto.
          */
+        
+            [JsonProperty("Nombre")]
+            public string Nombre { get; set; }
 
-        [JsonProperty("Nombre")]
-        public string Nombre { get; set; }
+            [JsonProperty("Apellido")]
+            public string Apellido { get; set; }
 
-        [JsonProperty("Apellido")]
-        public string Apellido { get; set; }
+            [JsonProperty("Email")]
+            public string Email { get; set; }
 
-        [JsonProperty("Email")]
-        public string Email { get; set; }
+            [JsonProperty("Clave")]
+            public string Clave { get; set; }
 
-        [JsonProperty("Clave")]
-        public string Clave { get; set; }
+            [JsonProperty("TipoUsuario")]
+            public TipoUsuario TipoUsuario { get; set; }
 
-        [JsonProperty("IdTipoUsuario")]
-        public long IdTipoUsuario { get; set; }
+            [JsonProperty("Estado")]
+            public bool Estado { get; set; }
 
-        [JsonProperty("Estado")]
-        public bool Estado { get; set; }
+            [JsonProperty("UrlPerfil")]
+            public string UrlPerfil { get; set; }
 
-        [JsonProperty("UrlPerfil")]
-        public string UrlPerfil { get; set; }
+            [JsonProperty("Descripcion")]
+            public string Descripcion { get; set; }
 
-        [JsonProperty("Id")]
-        public long Id { get; set; }
+            [JsonProperty("Id")]
+            public string Id { get; set; }
+        }
+
+              
+
+
 
     }
 
- 
 
-}
+
+
