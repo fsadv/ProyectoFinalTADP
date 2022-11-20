@@ -1,4 +1,13 @@
-﻿    <!-- ======= Header ======= -->
+﻿@{ 
+
+    String jsonString =  (Session["Usuario"]).ToString();
+    Console.WriteLine(jsonString);
+
+}
+
+
+
+  <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -13,12 +22,19 @@
                 <li><a class="nav-link scrollto active" href="#services">Servicios</a></li>
                 <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
-                <li><a class="nav-item nav-link" href="/Usuarios/Index">Gestión de Usuarios</a></li>
+                <li><a class="nav-item nav-link" href="/Usuarios/Index" id="panelAdmin">Gestión de Usuarios</a></li>
                 <li><a class="nav-link scrollto" href="login">Cerrar Sesión</a></li>
-
             </ul>
+
+            <textarea id="nuevaPrueba" hidden>
+
+                    @jsonString
+    
+                </textarea>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
     </div>
 </header><!-- End Header -->
+
+<script src="~/assets/js/testSession.js"></script>

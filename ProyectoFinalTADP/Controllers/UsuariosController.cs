@@ -33,16 +33,22 @@ namespace ProyectoFinalTADP.Controllers
 
             List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
 
-            if(listUsuarios.Any(x => x.Email == mail && x.Clave == password))
+            if (listUsuarios.Any(x => x.Email == mail && x.Clave == password))
             {
+                Usuario usuario = listUsuarios.Where(x => x.Email == mail && x.Clave == password).FirstOrDefault();
+                Session["Usuario"] = JsonConvert.SerializeObject(usuario);                
+                //Session["Usuario"] = usuario;
+                //Usuario actual = (Usuario)Session["Usuario"];
                 return RedirectToAction("Index", "Home");
-            } else
+            }
+            else
             {
                 return RedirectToAction("Login", "Usuarios");
             }
-            
-       
+
+
         }
+
 
 
         /*
