@@ -271,12 +271,12 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Head.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
     <Content Include="Views\Usuarios\Login.cshtml" />
     <Content Include="Views\Shared\_Contacto.cshtml" />
     <Content Include="Views\Shared\_Bienvenida.cshtml" />
     <Content Include="Views\Shared\_Servicios.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

@@ -36,6 +36,7 @@ namespace ProyectoFinalTADP.Controllers
             if (listUsuarios.Any(x => x.Email == mail && x.Clave == password))
             {
                 Usuario usuario = listUsuarios.Where(x => x.Email == mail && x.Clave == password).FirstOrDefault();
+              
                 Session["Usuario"] = usuario;                                
                 return RedirectToAction("Index", "Home");
             }
@@ -72,6 +73,8 @@ namespace ProyectoFinalTADP.Controllers
         // GET: Usuarios/Create
         public ActionResult Create()
         {
+
+            //LOGICA DE SOLICITUD POST A MOCKAPI
             return View(new Entidades.Usuario());
         }
 
@@ -81,6 +84,7 @@ namespace ProyectoFinalTADP.Controllers
         {
             try
             {
+                
                 string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios", JsonConvert.SerializeObject(collection),"Post").CreateObject();
                 List<Usuario> listUsuarios = JsonConvert.DeserializeObject<List<Usuario>>(listUsuariosJson);
 

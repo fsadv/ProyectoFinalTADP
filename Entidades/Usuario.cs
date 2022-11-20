@@ -29,7 +29,7 @@ namespace Entidades
             public string Clave { get; set; }
 
             [JsonProperty("TipoUsuario")]
-            public TipoUsuario TipoUsuario { get; set; }
+            public Enumerables.TipoUsuario TipoUsuario { get; set; }
 
             [JsonProperty("Estado")]
             public bool Estado { get; set; }
