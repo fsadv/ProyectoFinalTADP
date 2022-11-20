@@ -158,7 +158,6 @@
     <Content Include="assets\img\testimonials\testimonials-4.jpg" />
     <Content Include="assets\img\testimonials\testimonials-5.jpg" />
     <Content Include="assets\js\main.js" />
-    <Content Include="assets\js\testSession.js" />
     <Content Include="assets\scss\Readme.txt" />
     <Content Include="assets\vendor\animate.css\animate.compat.css" />
     <Content Include="assets\vendor\animate.css\animate.css" />
