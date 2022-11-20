@@ -102,11 +102,11 @@ h6 {
   letter-spacing: 1px;
 }
 
-    #header .logo h1 a,
-    #header .logo h1 a:hover {
-        color: darkorange;
-        text-decoration: none;
-    }
+#header .logo h1 a,
+#header .logo h1 a:hover {
+    color: darkorange;
+    text-decoration: none;
+}
 
 #header .logo img {
   padding: 0;

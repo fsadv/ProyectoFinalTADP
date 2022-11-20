@@ -1,7 +1,10 @@
 ﻿@{ 
+    Entidades.Enumerables.TipoUsuario tipoUsuario = Entidades.Enumerables.TipoUsuario.Cliente;
 
-    string user =  ((Entidades.Usuario)Session["Usuario"]).TipoUsuario.tipo;
-    Console.WriteLine(user);
+    if(Session["Usuario"] != null) {
+        tipoUsuario =  ((Entidades.Usuario)Session["Usuario"]).TipoUsuario;
+        Console.WriteLine(tipoUsuario);
+    }
 
 }
 
@@ -22,7 +25,7 @@
                 <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 @{
-                    if(user == "admin") {
+                    if (tipoUsuario == Entidades.Enumerables.TipoUsuario.Administrador) {
                     <li><a class="nav-item nav-link" href="/Usuarios/Index" id="panelAdmin">Gestión de Usuarios</a></li>
                     }
                 }
