@@ -130,6 +130,7 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\Usuarios\login.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\descarga.png" />
     <Content Include="assets\img\favicon.png" />
     <Content Include="assets\img\features-1.png" />
     <Content Include="assets\img\features-2.png" />
