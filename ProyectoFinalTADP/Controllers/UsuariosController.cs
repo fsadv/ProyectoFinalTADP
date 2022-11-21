@@ -167,7 +167,7 @@ namespace ProyectoFinalTADP.Controllers
                            Convert.ToInt32(ConfigurationManager.AppSettings["Puerto"].ToString()),
                            Convert.ToBoolean(ConfigurationManager.AppSettings["UsaSSL"].ToString()));
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
