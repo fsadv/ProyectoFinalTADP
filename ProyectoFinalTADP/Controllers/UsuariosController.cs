@@ -73,14 +73,12 @@ namespace ProyectoFinalTADP.Controllers
         // GET: Usuarios/Create
         public ActionResult Create()
         {
-
-            //LOGICA DE SOLICITUD POST A MOCKAPI
             return View(new Entidades.Usuario());
         }
 
         // POST: Usuarios/Create
         [HttpPost]
-        public ActionResult Create(Entidades.Usuario collection)
+        public ActionResult Create(Entidades.Usuario collection) //mockAPI no recibe el body
         {
             try
             {
@@ -96,20 +94,19 @@ namespace ProyectoFinalTADP.Controllers
             }
         }
 
-        // GET: Usuarios/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+        //// GET: Usuarios/Edit/5
+        //public ActionResult Edit(int id) //NO UTILIZADO, se comenta como respaldo
+        //{
+        //    return View();
+        //}
 
         // POST: Usuarios/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection) //mockAPI no recibe el body
         {
             try
             {
-                // TODO: Add update logic here
-
+                string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, JsonConvert.SerializeObject(collection), "PUT").CreateObject();
                 return RedirectToAction("Index");
             }
             catch
@@ -121,24 +118,24 @@ namespace ProyectoFinalTADP.Controllers
         // GET: Usuarios/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, id.ToString(), "DELETE").CreateObject();
+            return RedirectToAction("Index");
         }
 
         // POST: Usuarios/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //public ActionResult Delete(int id, FormCollection collection) //NO UTILIZADO, se comenta como respaldo
+        //{
+        //    try
+        //    {
+        //        string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, JsonConvert.SerializeObject(collection), "DELETE").CreateObject();
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
 
         /*
