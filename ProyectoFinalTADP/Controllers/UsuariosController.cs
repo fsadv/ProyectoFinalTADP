@@ -65,9 +65,12 @@ namespace ProyectoFinalTADP.Controllers
         }
 
         // GET: Usuarios/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
+        public ActionResult Details(int id)        {
+
+            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
+            Usuario usuario = listUsuarios.Where(x => x.Id == id.ToString()).FirstOrDefault();
+
+            return View(usuario);
         }
 
         // GET: Usuarios/Create
@@ -94,13 +97,17 @@ namespace ProyectoFinalTADP.Controllers
             }
         }
 
-        //// GET: Usuarios/Edit/5
-        //public ActionResult Edit(int id) //NO UTILIZADO, se comenta como respaldo
-        //{
-        //    return View();
-        //}
+        /// GET: Usuarios/Edit/5
+        public ActionResult Edit(int id) 
+        {
+            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
+            Usuario usuario = listUsuarios.Where(x=> x.Id == id.ToString()).FirstOrDefault();
+
+            return View(usuario);
+        }
 
         // POST: Usuarios/Edit/5
+
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection) //mockAPI no recibe el body
         {
