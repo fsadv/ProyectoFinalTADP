@@ -15,13 +15,25 @@ namespace Servicios
 
         public string Method { get; set; }
 
+
+        /*
+         Constructor de la clase REST, diseñada para consumir los servicios.
+         En caso de no contar con ningún método HTTP a la hora de ser instanciado, se 
+         realiza una petición de tipo GET.
+         */
+
         public Rest(string url, string data = "",string method="GET")
+
         {
             URL = url;
             Data = data;
             Method = method;
         }
 
+
+        /*
+         Método encargado del tratamiento de la respuesta recibida para su posterior retorno.
+         */
         public string CreateObject()
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);

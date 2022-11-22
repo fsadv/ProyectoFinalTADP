@@ -128,11 +128,13 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\Usuarios\login.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\descarga.png" />
     <Content Include="assets\img\favicon.png" />
     <Content Include="assets\img\features-1.png" />
     <Content Include="assets\img\features-2.png" />
     <Content Include="assets\img\features-3.png" />
     <Content Include="assets\img\features-4.png" />
+    <Content Include="assets\img\fondoit.jpg" />
     <Content Include="assets\img\fotologin.png" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
@@ -268,9 +270,15 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Head.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Usuarios\Login.cshtml" />
+    <Content Include="Views\Shared\_Contacto.cshtml" />
+    <Content Include="Views\Shared\_Bienvenida.cshtml" />
+    <Content Include="Views\Shared\_Servicios.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Login.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
@@ -280,6 +288,10 @@
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{2f43d722-9621-45bd-b830-63816f3eee0f}</Project>
       <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{df468ade-d09a-448a-a83a-813c853910b3}</Project>
+      <Name>Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
