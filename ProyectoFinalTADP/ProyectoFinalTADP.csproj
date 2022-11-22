@@ -150,10 +150,10 @@
     <Content Include="assets\img\portfolio\portfolio-details-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-details-2.jpg" />
     <Content Include="assets\img\portfolio\portfolio-details-3.jpg" />
-    <Content Include="assets\img\team\team-1.jpg" />
-    <Content Include="assets\img\team\team-2.jpg" />
-    <Content Include="assets\img\team\team-3.jpg" />
-    <Content Include="assets\img\team\team-4.jpg" />
+    <Content Include="assets\img\team\2022-11-22.png" />
+    <Content Include="assets\img\team\Facu.jpg" />
+    <Content Include="assets\img\team\Flor.jpg" />
+    <Content Include="assets\img\team\foto Gonzalo Fuentes.png" />
     <Content Include="assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="assets\img\testimonials\testimonials-3.jpg" />
@@ -281,6 +281,8 @@
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Delete.cshtml" />
     <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Shared\_CarrouselClientes.cshtml" />
+    <Content Include="Views\Shared\_Equipo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
