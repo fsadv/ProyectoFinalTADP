@@ -11,7 +11,6 @@ namespace Servicios
    public class Usuarios
     {
 
-
         public static List<Entidades.Usuario> Listar()
         {
             string listUsuariosJson = new Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios").CreateObject();

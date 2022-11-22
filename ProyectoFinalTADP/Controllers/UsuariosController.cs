@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using Newtonsoft.Json;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -189,8 +190,10 @@ namespace ProyectoFinalTADP.Controllers
         }
     }
 
-      
-    }
+    
+    
+
+}
 
 
 
