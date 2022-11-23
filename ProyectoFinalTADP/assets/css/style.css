@@ -1255,6 +1255,10 @@ section {
   overflow: hidden;
 }
 
+.img-fluid{
+    height: 195px;
+}
+
 .team .member .social {
   position: absolute;
   left: 0;
