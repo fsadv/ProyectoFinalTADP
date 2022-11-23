@@ -1248,17 +1248,21 @@ section {
             overflow: hidden;
         }
 
-        .team .member .social {
-            position: absolute;
-            left: 0;
-            bottom: 30px;
-            right: 0;
-            opacity: 0;
-            transition: ease-in-out 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.img-fluid{
+    height: 195px;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
             .team .member .social a {
                 transition: color 0.3s;
