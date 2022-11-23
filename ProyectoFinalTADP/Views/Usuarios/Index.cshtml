@@ -10,79 +10,101 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/assets/css/style.css" rel="stylesheet" />
     <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <p>
-        @Html.ActionLink("Crear Nuevo", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Apellido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Clave)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UrlPerfil)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoUsuario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th></th>
-        </tr>
+    <div id="list">
+        <div class="list_link_container">
+            <button type="submit" value="Guardar Cambios" class="form_btn">
+                <span>
+                    @Html.ActionLink("Crear Nuevo", "Create")
+                </span>
+            </button>
 
-        @foreach (var item in Model)
-        {
+        </div>
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Apellido)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Clave)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UrlPerfil)
-                </td>
                 <th>
-                    @Html.DisplayFor(model => item.TipoUsuario)
+                    @Html.DisplayNameFor(model => model.Nombre)
                 </th>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descripcion)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Clave)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrlPerfil)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoUsuario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </th>
+                <th></th>
             </tr>
-        }
 
-    </table>
-    <p>
-        @Html.ActionLink("Regresar", "../Home/Index")
-    </p>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Clave)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrlPerfil)
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.TipoUsuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div class="list_link_container">
+
+            <a href="../Home/Index" class="form_back_link">
+
+                <div class="cta1">
+                    <span class="hover-underline-animation">
+                        Regresar
+                    </span>
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal" class="form_back_svg">
+                        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                    </svg>
+                </div>
+
+            </a>
+        </div>
+    </div>
 </body>
 </html>
