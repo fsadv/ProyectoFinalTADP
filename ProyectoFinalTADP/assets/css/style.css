@@ -1367,9 +1367,9 @@ section {
     background: #fff;
 }
 
-    .contact .php-email-form .form-group {
-        padding-bottom: 8px;
-    }
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
 
     .contact .php-email-form .error-message {
         display: none;
@@ -1539,7 +1539,7 @@ section {
     }
 
     #footer p {
-        font-size: 15;
+        font-size: 15px;
         font-style: italic;
         padding: 0;
         margin: 0 0 40px 0;
@@ -1613,13 +1613,13 @@ section {
     width: 100%
 }
 
-body form {
+.clase1 form {
     width: 100vw;
     max-width: 100%;
     min-height: calc(100vh - 24px);
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .form_title {
