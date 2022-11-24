@@ -1,9 +1,10 @@
 ﻿@{ 
     Entidades.Enumerables.TipoUsuario tipoUsuario = Entidades.Enumerables.TipoUsuario.Cliente;
-
+    string nombreUsuario = "";
     if(Session["Usuario"] != null) {
-        tipoUsuario =  ((Entidades.Usuario)Session["Usuario"]).TipoUsuario;
-        Console.WriteLine(tipoUsuario);
+        Entidades.Usuario usuario = (Entidades.Usuario)Session["Usuario"];
+        tipoUsuario =  usuario.TipoUsuario;
+        nombreUsuario = usuario.Nombre + " " + usuario.Apellido;
     }
 
 }
@@ -31,7 +32,13 @@
                         <li><a class="nav-item nav-link" href="/Usuarios/Index" id="panelAdmin">Gestión de Usuarios</a></li>
                     }
                 }
-                <li><a class="nav-link scrollto" href="/Usuarios/Login">Cerrar Sesión</a></li>
+                @{ if (Session["Usuario"] != null)
+                    {
+                        <li> <a class="nav-link scrollto active">Bienvenid@@  @nombreUsuario !</a></li>
+                        <li><a class="nav-link scrollto" href="/Usuarios/Login">Cerrar Sesión</a></li>
+                    }
+                }
+
             </ul>
 
 
