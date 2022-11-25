@@ -15,18 +15,16 @@ namespace ProyectoFinalTADP.Controllers
     public class UsuariosController : Controller
     {
 
-
+        #region Vista de Login de usuarios
         public ActionResult Login()
         {
             return View();
         }
 
+        #endregion
 
-        /*
-         Método encargado de validar la información del formulario de Login, en el cual la misma se cruza
-         con la data de los usuarios almacenados en MockApi. En caso de encontrar coincidencias, redirige a 
-         la pantalla de inicio. Caso contrario, vuelve a cargar la vista.         
-         */
+
+        #region Métodos POST
 
         [HttpPost]
         public ActionResult Auth(string mail, string password)
@@ -37,8 +35,8 @@ namespace ProyectoFinalTADP.Controllers
             if (listUsuarios.Any(x => x.Email == mail && x.Clave == password))
             {
                 Usuario usuario = listUsuarios.Where(x => x.Email == mail && x.Clave == password).FirstOrDefault();
-              
-                Session["Usuario"] = usuario;                                
+
+                Session["Usuario"] = usuario;
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -50,44 +48,13 @@ namespace ProyectoFinalTADP.Controllers
         }
 
 
-
-        /*
-         Vista del ABM de usuarios. En la misma se realiza un consumo de la lista de usuarios 
-         en Mockapi y se muestran sus datos en un formato de tabla.
-         */
-
-        // GET: Usuarios
-        public ActionResult Index()
-        {
-            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios").CreateObject();
-            List<Usuario> listUsuarios = JsonConvert.DeserializeObject<List<Usuario>>(listUsuariosJson);
-
-            return View(listUsuarios);
-        }
-
-        // GET: Usuarios/Details/5
-        public ActionResult Details(int id)        {
-
-            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
-            Usuario usuario = listUsuarios.Where(x => x.Id == id.ToString()).FirstOrDefault();
-
-            return View(usuario);
-        }
-
-        // GET: Usuarios/Create
-        public ActionResult Create()
-        {
-            return View(new Entidades.Usuario());
-        }
-
-        // POST: Usuarios/Create
         [HttpPost]
         public ActionResult Create(Entidades.Usuario collection) //mockAPI no recibe el body
         {
             try
             {
-                
-                string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios", JsonConvert.SerializeObject(collection),"Post").CreateObject();
+
+                string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios", JsonConvert.SerializeObject(collection), "Post").CreateObject();
                 List<Usuario> listUsuarios = JsonConvert.DeserializeObject<List<Usuario>>(listUsuariosJson);
 
                 return RedirectToAction("Index");
@@ -97,17 +64,6 @@ namespace ProyectoFinalTADP.Controllers
                 return View();
             }
         }
-
-        /// GET: Usuarios/Edit/5
-        public ActionResult Edit(int id) 
-        {
-            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
-            Usuario usuario = listUsuarios.Where(x=> x.Id == id.ToString()).FirstOrDefault();
-
-            return View(usuario);
-        }
-
-        // POST: Usuarios/Edit/5
 
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection) //mockAPI no recibe el body
@@ -123,39 +79,8 @@ namespace ProyectoFinalTADP.Controllers
             }
         }
 
-        // GET: Usuarios/Delete/5
-        public ActionResult Delete(int id)
-        {
-            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, id.ToString(), "DELETE").CreateObject();
-            return RedirectToAction("Index");
-        }
-
-        // POST: Usuarios/Delete/5
-        //[HttpPost]
-        //public ActionResult Delete(int id, FormCollection collection) //NO UTILIZADO, se comenta como respaldo
-        //{
-        //    try
-        //    {
-        //        string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, JsonConvert.SerializeObject(collection), "DELETE").CreateObject();
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
-
-        /*
-         En el siguiente método se procesa el formulario de Contacto de la página web. 
-         El mismo tiene como fin enviar las consultas de los posibles clientes a un email
-         que se encarga de la distribución a los integrantes del equipo.
-         Al no tener ese mail creado, se utiliza el mismo remitente y destinatario, con fines
-         de comprobar su funcionamiento.
-         */
-
         [HttpPost]
-        public ActionResult ProcesarForm(string name, string email, string subject, string message) //Metodo que procesa el formulario de envio de correo
+        public ActionResult ProcesarForm(string name, string email, string subject, string message)
         {
             try
             {
@@ -176,22 +101,85 @@ namespace ProyectoFinalTADP.Controllers
             }
             catch (Exception ex)
             {
-                throw new Exception("Error");
+                throw new Exception("Error" + ex.Message);
 
-            }       
+            }
 
-           
+
         }
 
-        private string GenerarBody (string email, string message) //Metodo para llenar el cuerpo del mail
+        #endregion
+
+
+        #region Métodos GET
+
+        public ActionResult Index()
+        {
+            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "/Usuarios").CreateObject();
+            List<Usuario> listUsuarios = JsonConvert.DeserializeObject<List<Usuario>>(listUsuariosJson);
+
+            return View(listUsuarios);
+        }
+
+
+        public ActionResult Details(int id)
+        {
+
+            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
+            Usuario usuario = listUsuarios.Where(x => x.Id == id.ToString()).FirstOrDefault();
+
+            return View(usuario);
+        }
+
+
+        public ActionResult Create()
+        {
+            return View(new Entidades.Usuario());
+        }
+
+
+
+
+
+        public ActionResult Edit(int id)
+        {
+            List<Usuario> listUsuarios = Servicios.Usuarios.Listar();
+            Usuario usuario = listUsuarios.Where(x => x.Id == id.ToString()).FirstOrDefault();
+
+            return View(usuario);
+        }
+
+
+
+        public ActionResult Delete(int id)
+        {
+            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, id.ToString(), "DELETE").CreateObject();
+            return RedirectToAction("Index");
+        }
+
+
+
+
+        #endregion
+
+
+        #region Métodos privados (Helpers)
+
+        private string GenerarBody(string email, string message)
         {
             return "El siguiente email: " + email + " escribe: \n" + message;
 
         }
+
+
+        #endregion
+
     }
 
-    
-    
+
+
+
+
 
 }
 
