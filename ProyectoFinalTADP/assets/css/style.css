@@ -1270,16 +1270,16 @@ section {
                 border-radius: 50px;
                 width: 36px;
                 height: 36px;
-                background: rgba(239, 102, 3, 0.8);
+                background: darkorange;
                 transition: ease-in-out 0.3s;
-                color: #fff;
+                color: darkorange;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
             }
 
                 .team .member .social a:hover {
-                    background: #fc8129;
+                    background: darkorange;
                 }
 
             .team .member .social i {
