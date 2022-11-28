@@ -134,7 +134,7 @@ namespace ProyectoFinalTADP.Controllers
 
         public ActionResult Create()
         {
-            return View(new Entidades.Usuario());
+            return View(new Usuario());
         }
 
 
