@@ -5,7 +5,59 @@
 
 }
 
-<section id="team" class="team">
+<section id="team" class="testimonials">
+    <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+            <h2>Equipo</h2>
+            <p>Nuestro equipo de expertos</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+                @{ int i = 1;}
+                @foreach (var item in listaUsuarios)
+                {
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            
+
+                            <div class="member-img">
+                                @{ string urlmodificada = item.UrlPerfil + "?random=" + i.ToString();
+                                }
+                                <img src=@urlmodificada class="img-fluid" alt="" width="195" height="255">
+
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+
+                            </div>
+
+
+
+                            @{
+                                <div class="member-info">
+                                    <h4>@item.Nombre @item.Apellido</h4>
+                                    <span>@item.Descripcion</span>
+                                </div>
+                            }
+                            @{i = i + 1;
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
+
+@*<section id="team" class="team">  // Segundo diseño
     <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -46,65 +98,65 @@
                 </div>
             </div>
 
-        }
-            @*<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
+        }*@
+@*<div class="col-lg-3 col-md-6 d-flex align-items-stretch">   // Primer diseño
+        <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
 
-                        <img src="~/assets/img/team/Facu.jpg" class="img-fluid" alt="" width="195" height="255">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Facundo Sad</h4>
-                        <span>Analista de Sistemas</span>
-                    </div>
+                <img src="~/assets/img/team/Facu.jpg" class="img-fluid" alt="" width="195" height="255">
+                <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
+            <div class="member-info">
+                <h4>Facundo Sad</h4>
+                <span>Analista de Sistemas</span>
+            </div>
+        </div>
+    </div>
 
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-img">
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
 
-                        <img src="~/assets/img/team/foto Gonzalo Fuentes.png" class="img-fluid" alt="" width="195" height="255">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Gonzalo Fuentes</h4>
-                        <span>Analista de Sistemas</span>
-                    </div>
+                <img src="~/assets/img/team/foto Gonzalo Fuentes.png" class="img-fluid" alt="" width="195" height="255">
+                <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
+            <div class="member-info">
+                <h4>Gonzalo Fuentes</h4>
+                <span>Analista de Sistemas</span>
+            </div>
+        </div>
+    </div>
 
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
+    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
 
-                        <img src="~/assets/img/team/Flor.jpg" class="img-fluid" alt="" width="195" height="255">
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4>Florencia Mariño</h4>
-                        <span>Diseñadora Web</span>
-                    </div>
+                <img src="~/assets/img/team/Flor.jpg" class="img-fluid" alt="" width="195" height="255">
+                <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
-            </div>*@
+            </div>
+            <div class="member-info">
+                <h4>Florencia Mariño</h4>
+                <span>Diseñadora Web</span>
+            </div>
+        </div>
+    </div>*@
+
+            @*</div>
 
         </div>
-
-    </div>
-</section>
+</section>*@
