@@ -284,6 +284,7 @@
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Shared\_CarrouselClientes.cshtml" />
     <Content Include="Views\Shared\_Equipo.cshtml" />
+    <Content Include="Views\Shared\_DondeEncontrarnos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
