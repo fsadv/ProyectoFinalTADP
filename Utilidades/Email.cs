@@ -10,27 +10,11 @@ namespace Utilidades
 {
     public class Email
     {
-        /// <summary>
-        /// Enviar correo generico
-        /// </summary>
-        /// <param name="from">De</param>
-        /// <param name="to">Para</param>
-        /// <param name="fromName">Nombre de la persona que envia el correo </param>
-        /// <param name="toName">Nombre de la persona que recibe el correo</param>
-        /// <param name="fromUser">email del usuario que se va a autenticar con el server</param>
-        /// <param name="fromPassword">clave del usuario que se va autenticar con el server</param>
-        /// <param name="subject">Asunto del mensaje</param>
-        /// <param name="body">Cuerpo del mensaje (Pede ser html)</param>
-        /// <param name="html">Formato Html </param>
-        /// <param name="host">host del servidor de correo </param>
-        /// <param name="Port">Puerto del servidor de correo</param>
-        /// <param name="enableSsl">habilitado el SSL</param>
-        /// <returns></returns>
-        /// 
 
+        #region Metodos públicos
+        
 
-
-        public static bool EnviarEmail   //Metodo de envío de email
+        public static bool EnviarEmail  
             (
                 string from,
                 string to,
@@ -86,12 +70,10 @@ namespace Utilidades
             }
         }
 
+        #endregion
 
-        /*
-         * El metodo ValidarEmail comprueba que ningun campo del mismo esté vacío, 
-         * con fin de evitar errores en su procesamiento.
-         */
-
+        #region Métodos privados
+        
         private static bool ValidarEmail(string from, string to, string fromName, string toName, string fromPassword, string subject, string body)
         {
             if (String.IsNullOrEmpty(from))
@@ -112,7 +94,12 @@ namespace Utilidades
             return true;
 
         }
+
+        #endregion
+
+
     }
+
 
 
 }
