@@ -1,13 +1,15 @@
-﻿@{ 
+﻿@{
     Entidades.Enumerables.TipoUsuario tipoUsuario = Entidades.Enumerables.TipoUsuario.Cliente;
     string nombreUsuario = "";
-    if(Session["Usuario"] != null) {
+    if (Session["Usuario"] != null)
+    {
         Entidades.Usuario usuario = (Entidades.Usuario)Session["Usuario"];
-        tipoUsuario =  usuario.TipoUsuario;
+        tipoUsuario = usuario.TipoUsuario;
         nombreUsuario = usuario.Nombre + " " + usuario.Apellido;
     }
 
 }
+
 
 
 
@@ -17,7 +19,7 @@
 
         <div class="logo">
             <h1><a href="#">Daily.Web</a></h1>
-         
+
         </div>
 
         <nav id="navbar" class="navbar">
@@ -27,8 +29,10 @@
                 <li><a class="nav-link scrollto" href="#testimonials">Clientes</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 <li><a class="nav-link scrollto" href="#mapa">Ubicación</a></li>
+
+
                 @{
-                    if (tipoUsuario == Entidades.Enumerables.TipoUsuario.Administrador)
+                               if (tipoUsuario == Entidades.Enumerables.TipoUsuario.Administrador)
                     {
                         <li><a class="nav-item nav-link" href="/Usuarios/Index" id="panelAdmin">Gestión de Usuarios</a></li>
                     }
@@ -36,9 +40,15 @@
                 @{ if (Session["Usuario"] != null)
                     {
                         <li> <a class="nav-link scrollto active">Bienvenid@@  @nombreUsuario !</a></li>
-                        <li><a class="nav-link scrollto" href="/Usuarios/Login">Cerrar Sesión</a></li>
+                        <li><a class="nav-link scrollto" href="/Usuarios/Login" id="logout">Cerrar Sesión</a></li>
                     }
                 }
+                @{ if (Session["Usuario"] == null)
+                    {
+                        <li><a class="nav-link scrollto" href="/Usuarios/Login">Login</a></li>
+                    }
+                }
+
 
             </ul>
 
@@ -48,3 +58,4 @@
 
     </div>
 </header>
+
