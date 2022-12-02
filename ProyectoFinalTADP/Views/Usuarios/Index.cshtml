@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Gestión usuarios</title>
     <link href="~/assets/css/style.css" rel="stylesheet" />
     <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="~/assets/js/jquery-3.6.1.min.js"></script>
@@ -20,8 +20,9 @@
 <body>
 
     <div id="list">
-        <h1>Gestión de Usuarios</h1>
-        <div class="list_link_container">
+        <div class="list_link_container ">
+            <h1 class="user_title">Daily Web</h1>
+
             <button type="submit" value="Guardar Cambios" class="form_btn">
                 <span>
                     @Html.ActionLink("Crear Nuevo", "Create")
@@ -30,6 +31,7 @@
 
         </div>
         <table class="table">
+        <caption class="user_subtitle">Gestión de Usuarios</caption>
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Nombre)
