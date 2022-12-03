@@ -60,7 +60,8 @@
                         <label for=" TipoUsuario">Tipo de usuario</label>
                         <select name="TipoUsuario" id="TipoUsuario" data-placeholder=" - Seleccione el tipo de usuario -"
                                 class="form-control chosenTipoUsuario"
-                                value="<%- typeof TipoUsuario != 'undefined' ? TipoUsuario : '' %>">
+                                value="<%- typeof TipoUsuario != 'undefined' ? TipoUsuario : '' %>"
+                                style="border-color:orange;">
                             <option value=""></option>
                             <option value="1">Administrador</option>
                             <option value="2">Dueno</option>
@@ -120,9 +121,6 @@
 
     </div>
 
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
 
