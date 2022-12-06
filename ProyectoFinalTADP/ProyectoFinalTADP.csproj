@@ -125,8 +125,54 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap4.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap4.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap5.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bootstrap5.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bulma.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.bulma.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.dataTables.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.dataTables.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.foundation.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.foundation.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.jqueryui.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.jqueryui.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.semanticui.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\dataTables.semanticui.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\jquery.dataTables.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\css\jquery.dataTables.min.css" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\images\sort_asc.png" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\images\sort_asc_disabled.png" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\images\sort_both.png" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\images\sort_desc.png" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\images\sort_desc_disabled.png" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap4.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap4.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap5.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bootstrap5.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bulma.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.bulma.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.dataTables.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.dataTables.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.foundation.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.foundation.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.jqueryui.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.jqueryui.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.semanticui.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\dataTables.semanticui.min.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\jquery.dataTables.js" />
+    <Content Include="assets\css\DataTables\DataTables-1.13.1\js\jquery.dataTables.min.js" />
+    <Content Include="assets\css\DataTables\datatables.css" />
+    <Content Include="assets\css\DataTables\datatables.js" />
+    <Content Include="assets\css\DataTables\datatables.min.css" />
+    <Content Include="assets\css\DataTables\datatables.min.js" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\Usuarios\login.css" />
+    <Content Include="assets\css\Usuarios\gestionUsuario.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\descarga.png" />
     <Content Include="assets\img\favicon.png" />
@@ -136,6 +182,9 @@
     <Content Include="assets\img\features-4.png" />
     <Content Include="assets\img\fondoit.jpg" />
     <Content Include="assets\img\fotologin.png" />
+    <Content Include="assets\img\img_inicio.svg" />
+    <Content Include="assets\img\logo_dw.svg" />
+    <Content Include="assets\img\logo_dw1.svg" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="assets\img\portfolio\portfolio-3.jpg" />
@@ -330,7 +379,7 @@
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>

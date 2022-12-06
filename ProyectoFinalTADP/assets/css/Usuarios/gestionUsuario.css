@@ -1,0 +1,188 @@
+.table_tr1:nth-child(1) {
+}
+
+#datatable_wrapper {
+    margin: 30px 0;
+    font-family: sans-serif;
+    padding: 0 20px;
+}
+
+.list_text_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.gestionUsuario_title {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+}
+
+/*.gestionUsuario_title::before {
+    content: "";
+    width: 52%;
+    height: 30px;
+    background-color: dodgerblue;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.6;
+    bottom: 10px;
+    right: 0;
+    z-index: -1;
+}*/
+
+.gestionUsuario_logo {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+}
+
+    .gestionUsuario_logo::before {
+        content: "";
+        width: 52%;
+        height: 30px;
+        background-color: dodgerblue;
+        display: inline-block;
+        position: absolute;
+        opacity: 0.6;
+        bottom: 10px;
+        left: 4px;
+        z-index: -1;
+    }
+
+
+.list_link_container1{
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+}
+/*back to list*/
+.cta1 {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+    .cta1 span {
+        padding-bottom: 7px;
+        letter-spacing: 4px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .cta1 svg {
+        transform: translateX(5px);
+        transition: all 0.3s ease;
+    }
+
+    .cta1:hover svg {
+        transform: translateX(15px);
+    }
+
+    .cta1:active svg {
+        transform: scale(0.9);
+    }
+
+.hover-underline-animation {
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+    .hover-underline-animation:hover {
+        color: black;
+    }
+
+.form_back_link {
+    text-decoration: none;
+    color: black;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.form_back_svg {
+    color: black;
+}
+
+.cta1:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*btn*/
+
+.form_btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: darkorange;
+    color: #fff;
+}
+
+    .form_btn span {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+    }
+
+
+        .form_btn:hover span, .form_btn:hover span a, .form_btn span a {
+            color: white;
+            text-decoration: none;
+        }
+
+    .form_btn::before,
+    .form_btn::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        height: 99%;
+        z-index: 0;
+        color: white;
+    }
+
+    .form_btn::before {
+        content: "";
+        background: #000;
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    .form_btn:hover::before {
+        transform: translate3d(100%, 0, 0);
+    }

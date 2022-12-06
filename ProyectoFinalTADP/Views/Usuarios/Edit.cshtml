@@ -28,21 +28,22 @@
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @id = "Nombre", @name = "Nombre", @type = "text", @PlaceHolder = "Nombre" } })
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Nombre" }
+                       })
                             @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @id = "Apellido", @name = "Apellido", @type = "text", @PlaceHolder = "Apellido" } })
+                            @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Apellido" } })
                             @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @id = "Email", @name = "Email", @type = "text", @PlaceHolder = "Correo Electrónico" } })
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @type = "email", @PlaceHolder = "Correo Electrónico" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -50,24 +51,30 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @id = "Clave", @name = "Clave", @type = "password", @PlaceHolder = "Contraseña" } })
+                            @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @type = "password", @PlaceHolder = "Contraseña" } })
                             @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
-                    <div class="form-group">                       
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.TipoUsuario, new { htmlAttributes = new { @class = "form-control form_input", @id = "TipoUsuario", @name = "TipoUsuario", @type = "number", @min = "1", @max = "4", @PlaceHolder = "Tipo de Usuario (1 - 2 - 3 - 4)" } })
-                            @Html.ValidationMessageFor(model => model.TipoUsuario, "", new { @class = "text-danger" })
-                        </div>
-                    </div>           
-
+                    <div class="form-group">
+                        <label for=" TipoUsuario">Tipo de usuario</label>
+                        <select name="TipoUsuario" id="TipoUsuario" data-placeholder=" - Seleccione el tipo de usuario -"
+                                class="form-control chosenTipoUsuario"
+                                value="<%- typeof TipoUsuario != 'undefined' ? TipoUsuario : '' %>"
+                                style="border-color:orange;">
+                            <option value=""></option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Dueno</option>
+                            <option value="3">Cliente</option>
+                            <option value="4">Otro</option>
+                        </select>
+                    </div>
 
 
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @id = "UrlPerfil", @name = "UrlPerfil", @type = "string", @PlaceHolder = "Url Perfil" } })
+                            @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Url Perfil" } })
                             @Html.ValidationMessageFor(model => model.UrlPerfil, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -75,7 +82,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control form_input", @id = "Descripcion", @name = "Descripcion", @type = "string", @PlaceHolder = "Descripción" } })
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Descripción" } })
                             @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -95,7 +102,7 @@
 
                         <button type="submit" value="Guardar Cambios" class="form_btn"><span>Guardar Cambios</span></button>
 
-                        <a href="/Usuarios/Index" class="form_back_link">
+                        <a href="/Usuarios/Index" class="form_back_link boton_volver">
                             <div class="cta1">
                                 <span class="hover-underline-animation">
                                     Back to user list
@@ -114,9 +121,6 @@
 
     </div>
 
-    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
 
