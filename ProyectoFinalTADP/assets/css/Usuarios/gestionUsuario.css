@@ -21,6 +21,7 @@
     font-size: 3rem;
     font-weight: 700;
     position: relative;
+    
 }
 
 
@@ -30,6 +31,7 @@
     font-size: 3rem;
     font-weight: 700;
     position: relative;
+    cursor: pointer;
 }
 
     .gestionUsuario_logo::before {
