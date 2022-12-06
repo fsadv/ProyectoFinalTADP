@@ -9,30 +9,31 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Gestión de usuarios</title>
     <script src="~/assets/js/jquery-3.6.1.min.js"></script>
     <script src="~/assets/js/Usuarios/delete-conf.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="~/assets/css/DataTables/datatables.min.css" />
+    <link href="~/assets/css/Usuarios/gestionUsuario.css" rel="stylesheet" />
+    <link href="~/assets/img/icono_daily.web.svg" rel="icon">
 
 </head>
 <body>
 
     <div id="list">
-        <h1 style="text-align:center">Gestión de Usuarios</h1>
-        <hr />
-        <br />
         <div class="list_link_container">
-            <button type="submit" value="Guardar Cambios" class="form_btn">
-                <span>
-                    @Html.ActionLink("Crear Nuevo", "Create")
-                </span>
-            </button>
+            <div class="list_text_container">
+                <a href="../Home/Index" style="text-decoration: none; color:black;">
+                    <h2 class="gestionUsuario_logo">Daily.Web</h2>
+                </a>
+                    <h1 class="gestionUsuario_title">Gestión de Usuarios</h1>
+                    <button type="submit" value="Crear nuevo" class="form_btn"><span><a href="/Usuarios/Create" style="text-decoration:none; color:black;">Crear Nuevo</a></span></button>
+</div>
         </div>
         <br />
         <table id="datatable" class="table">
             <thead>
-                <tr>
+                <tr class="table_tr1">
                     <th>
                         @Html.DisplayNameFor(model => model.Nombre)
                     </th>
@@ -104,19 +105,14 @@
             </tbody>
 
         </table>
-        <div class="list_link_container">
+        <div class="list_link_container list_link_container1">
 
-            <a href="../Home/Index" class="form_back_link">
-
-                <div class="cta1">
-                    <span class="hover-underline-animation">
-                        Regresar
-                    </span>
-                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal" class="form_back_svg">
-                        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                    </svg>
-                </div>
-
+   
+            <a href="../Home/Index" style="text-decoration: none">
+                <button class="btn_volver">
+                    <span>Regresar</span>
+                        <img src="~/assets/img/icono_volver.svg" class="icono_volver"/>
+                </button>
             </a>
         </div>
     </div>

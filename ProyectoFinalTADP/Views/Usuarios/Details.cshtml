@@ -12,6 +12,7 @@
     <title>Details | Daily.Web</title>
     <link href="~/assets/css/style.css" rel="stylesheet" />
     <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/img/icono_daily.web.svg" rel="icon">
 </head>
 
 <body>
@@ -29,21 +30,21 @@
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Nombre" } })
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @id = "Nombre", @name = "Nombre", @type = "text", @PlaceHolder = "Nombre" } })
                             @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Apellido" } })
+                            @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @id = "Apellido", @name = "Apellido", @type = "text", @PlaceHolder = "Apellido" } })
                             @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Correo Electrónico" } })
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @id = "Email", @name = "Email", @type = "text", @PlaceHolder = "Correo Electrónico" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Contraseña" } })
+                            @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @id = "Clave", @name = "Clave", @type = "password", @PlaceHolder = "Contraseña" } })
                             @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -59,7 +60,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.TipoUsuario, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Tipo de Usuario (1 - 2 - 3 - 4)" } })
+                            @Html.EditorFor(model => model.TipoUsuario, new { htmlAttributes = new { @class = "form-control form_input", @id = "TipoUsuario", @name = "TipoUsuario", @type = "number", @min = "1", @max = "4", @PlaceHolder = "Tipo de Usuario (1 - 2 - 3 - 4)" } })
                             @Html.ValidationMessageFor(model => model.TipoUsuario, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -69,7 +70,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Url Perfil" } })
+                            @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @id = "UrlPerfil", @name = "UrlPerfil", @type = "string", @PlaceHolder = "Url Perfil" } })
                             @Html.ValidationMessageFor(model => model.UrlPerfil, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control form_input", @PlaceHolder = "Descripción" } })
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control form_input", @id = "Descripcion", @name = "Descripcion", @type = "string", @PlaceHolder = "Descripción" } })
                             @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -94,17 +95,9 @@
 
                     <div class="form-group btn_details  btn_container">
 
-
-
-                        <a href="/Usuarios/Index" class="form_back_link">
-                            <div class="cta1">
-                                <span class="hover-underline-animation">
-                                    Back to user list
-                                </span>
-                                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal" class="form_back_svg">
-                                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                                </svg>
-                            </div>
+                        <a href="/Usuarios/Index" class="btn_volver" style="text-decoration: none; color:black;">
+                            <span>Regresar</span>
+                            <img src="~/assets/img/icono_volver.svg" class="icono_volver" />
                         </a>
 
                     </div>

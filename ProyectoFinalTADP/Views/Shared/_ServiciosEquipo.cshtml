@@ -12,16 +12,19 @@
             <p>Soluciones a su medida</p>
         </div>
 
-        <div class="row">
+        <div class="services_container">
 
           
             @foreach (var item in listServicios)
             {
-            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-                <div class="icon-box aos-init aos-animate" data-aos="zoom-in-left" data-aos-delay="100">
-                    <div class="icon"><i class="bi bi-card-checklist" style="color: #ff689b;"></i></div>
+            <div class="col-lg-5 col-md-6 mt-5 mt-md-0  ">
+                <div class="icon-box aos-init aos-animate flex flex-column justify-content-center align-items-center"  data-aos="zoom-in-left" data-aos-delay="100">
+                    @{ string urlmodificada = item.UrlIconoServicio;
+                    }
+                    <img src=@urlmodificada class="img-icon" alt="" width="80" height="80">
+
                     <h4 class="title"><a href="">@item.Titulo</a></h4>
-                    <p class="description">@item.Descripcion</p>
+                    <p class="description text-justify w-75">@item.Descripcion</p>
 
                 </div>
             </div>

@@ -172,6 +172,7 @@
     <Content Include="assets\css\DataTables\datatables.min.js" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\css\Usuarios\login.css" />
+    <Content Include="assets\css\Usuarios\gestionUsuario.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\descarga.png" />
     <Content Include="assets\img\favicon.png" />
@@ -181,6 +182,12 @@
     <Content Include="assets\img\features-4.png" />
     <Content Include="assets\img\fondoit.jpg" />
     <Content Include="assets\img\fotologin.png" />
+    <Content Include="assets\img\icono_daily.web.svg" />
+    <Content Include="assets\img\icono_dw.svg" />
+    <Content Include="assets\img\icono_volver.svg" />
+    <Content Include="assets\img\img_inicio.svg" />
+    <Content Include="assets\img\logo_dw.svg" />
+    <Content Include="assets\img\logo_dw1.svg" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="assets\img\portfolio\portfolio-3.jpg" />
