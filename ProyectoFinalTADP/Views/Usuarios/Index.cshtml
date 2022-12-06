@@ -24,11 +24,7 @@
             <div class="list_text_container">
                 <h2 class="gestionUsuario_logo">Daily.Web</h2>
                 <h1 class="gestionUsuario_title">Gestión de Usuarios</h1>
-            <button type="submit" value="Guardar Cambios" class="form_btn">
-                <span>
-                    @Html.ActionLink("Crear Nuevo", "Create")
-                </span>
-            </button>
+                <button type="submit" value="Crear nuevo" class="form_btn"><span><a href="/Usuarios/Create" style="text-decoration:none; color:black;">Crear Nuevo</a></span></button>
             </div>
         </div>
         <br />
@@ -108,17 +104,12 @@
         </table>
         <div class="list_link_container list_link_container1">
 
-            <a href="../Home/Index" class="form_back_link">
-
-                <div class="cta1">
-                    <span class="hover-underline-animation">
-                        Regresar
-                    </span>
-                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal" class="form_back_svg">
-                        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                    </svg>
-                </div>
-
+   
+            <a href="../Home/Index" style="text-decoration: none">
+                <button class="btn_volver">
+                    <span>Regresar</span>
+                        <img src="~/assets/img/icono_volver.svg" class="icono_volver"/>
+                </button>
             </a>
         </div>
     </div>
