@@ -58,8 +58,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for=" TipoUsuario">
-                            Tipo de usuario: @Html.DisplayFor(model => model.TipoUsuario)</label>
+                            <label for=" TipoUsuario">
+                                Tipo de usuario:
+                            </label>
                         @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))),
                                     "Seleccionar Tipo", new { @class = "form-control form_input" } )
                     </div>

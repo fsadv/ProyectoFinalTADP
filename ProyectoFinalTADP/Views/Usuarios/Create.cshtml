@@ -60,7 +60,7 @@
                         <label for=" TipoUsuario">
                             Tipo de usuario:
                         </label>
-                        @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))), new { @class = "form-control form_input" })
+                        @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))), new { @class = "form-control form_input", @type="number"})
 
                     </div>
 
