@@ -58,16 +58,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label for=" TipoUsuario">Tipo de usuario</label>
-                        <select name="TipoUsuario" id="TipoUsuario" data-placeholder=" - Seleccione el tipo de usuario -"
-                                class="form-control chosenTipoUsuario"
-                                value="<%- typeof TipoUsuario != 'undefined' ? TipoUsuario : '' %>"
-                                style="border-color:orange;">
-                            <option value="1">Administrador</option>
-                            <option value="2">Dueno</option>
-                            <option value="3">Cliente</option>
-                            <option value="4">Otro</option>
-                        </select>
+                        <label for=" TipoUsuario">
+                            Tipo de usuario: @Html.DisplayFor(model => model.TipoUsuario)</label>
+                        @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))),
+                                    "Seleccionar Tipo", new { @class = "form-control form_input" } )
                     </div>
 
 
