@@ -63,7 +63,6 @@
                                 class="form-control chosenTipoUsuario"
                                 value="<%- typeof TipoUsuario != 'undefined' ? TipoUsuario : '' %>"
                                 style="border-color:orange;">
-                            <option value=""></option>
                             <option value="1">Administrador</option>
                             <option value="2">Dueno</option>
                             <option value="3">Cliente</option>
@@ -83,7 +82,7 @@
                     <div class="form-group">
 
                         <div class="form_fields">
-                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Descripción" } })
+                            @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control form_input", style = " rows=20, columns=40", @PlaceHolder = "Descripción" })
                             @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
                         </div>
                     </div>
