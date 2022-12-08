@@ -2070,6 +2070,7 @@ td {
         height: 300px;
         width: 96vw !important;
         padding: 8px 10px 8px 65px !important;
+        margin: 0 !important;
     }
     .title{
         margin:10px 10px 15px 10px !important;
