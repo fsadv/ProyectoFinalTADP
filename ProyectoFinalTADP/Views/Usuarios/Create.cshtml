@@ -13,99 +13,100 @@
     <link href="~/assets/css/style.css" rel="stylesheet" />
     <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/assets/img/icono_daily.web.svg" rel="icon">
+     
 </head>
 <body>
     <div class="form_usuario clase1">
         <div class="clase2">
 
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <h4 class="form_title">Registro de usuario</h4>
-                <hr class="form_line" />
-                <div class="form_container">
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Nombre" } })
-                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Apellido" } })
-                            @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @type = "email", @PlaceHolder = "Correo Electrónico" } })
-                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @type = "password", @PlaceHolder = "Contraseña" } })
-                            @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for=" TipoUsuario">
-                            Tipo de usuario:
-                        </label>
-                        @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))), new { @class = "form-control form_input", @type="number"})
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <div class="form_fields">
-                            @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Url Perfil" } })
-                            @Html.ValidationMessageFor(model => model.UrlPerfil, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-
-                        <div class="form_fields">
-                            @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control form_input", style = " rows=20, columns=40", @PlaceHolder = "Descripción" })
-                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group form_checkbox">
-                        @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="form_fields ">
-                            <div class="checkbox">
-                                @Html.EditorFor(model => model.Estado)
-                                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                <div class="form-horizontal">
+                    <h4 class="form_title">Registro de usuario</h4>
+                    <hr class="form_line" />
+                    <div class="form_container">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <div class="form_fields">
+                                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Nombre" } })
+                                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group btn_container">
+                        <div class="form-group">
+                            <div class="form_fields">
+                                @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Apellido" } })
+                                @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
 
-                        <button type="submit" value="Crear nuevo" class="form_btn crear-nuevo ">Crear Nuevo</button>
+                        <div class="form-group">
+                            <div class="form_fields">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form_input", @type = "email", @PlaceHolder = "Correo Electrónico" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
 
-                        <a href="/Usuarios/Index" class="btn_volver" style="text-decoration: none; color:black;">
-                            <span>Regresar</span>
-                            <img src="~/assets/img/icono_volver.svg" class="icono_volver" />
-                        </a>
+                        <div class="form-group">
+
+                            <div class="form_fields">
+                                @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @class = "form-control form_input", @type = "password", @PlaceHolder = "Contraseña" } })
+                                @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for=" TipoUsuario">
+                                Tipo de usuario:
+                            </label>
+                            @Html.DropDownListFor(model => model.TipoUsuario, new SelectList(Enum.GetValues(typeof(Entidades.Enumerables.TipoUsuario))), new { @class = "form-control form_input", @type = "number" })
+
+                        </div>
 
 
+
+                        <div class="form-group">
+
+                            <div class="form_fields">
+                                @Html.EditorFor(model => model.UrlPerfil, new { htmlAttributes = new { @class = "form-control form_input", @type = "text", @PlaceHolder = "Url Perfil" } })
+                                @Html.ValidationMessageFor(model => model.UrlPerfil, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="form_fields">
+                                @Html.TextAreaFor(model => model.Descripcion, new { @class = "form-control form_input", style = " rows=20, columns=40", @PlaceHolder = "Descripción" })
+                                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group form_checkbox">
+                            @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="form_fields ">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Estado)
+                                    @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group btn_container">
+
+                            <button type="submit" value="Crear nuevo" class="form_btn crear-nuevo ">Crear Nuevo</button>
+
+                            <a href="/Usuarios/Index" class="btn_volver" style="text-decoration: none; color:black;">
+                                <span>Regresar</span>
+                                <img src="~/assets/img/icono_volver.svg" class="icono_volver" />
+                            </a>
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
         </div>
     </div>
 

@@ -211,6 +211,7 @@
     <Content Include="assets\img\testimonials\testimonials-4.jpg" />
     <Content Include="assets\img\testimonials\testimonials-5.jpg" />
     <Content Include="assets\img\wave.svg" />
+    <Content Include="assets\img\waves-fondo.svg" />
     <Content Include="assets\js\jquery-3.6.1.min.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\Usuarios\delete-conf.js" />
