@@ -5,52 +5,89 @@
 
 
 <head>
-    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    @*<link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">*@
     <link href="~/assets/css/Usuarios/login.css" rel="stylesheet" />
     <script src="~/assets/js/jquery-3.6.1.min.js"></script>
-    <title>Usuario Login</title>
+    <title>Login | Daily.Web</title>
     <link href="~/assets/img/icono_daily.web.svg" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <section class="vh-100">
-   
-    
-    <div class="container px-4 py-5 mx-auto">
+
+
+
+    <img class="wave" src="~/assets/img/wave.svg" alt="waves">
+    <div class="container">
+        <div class="img">
+            <img src="~/assets/img/Daily.web.svg" alt="daily.web">
+        </div>
+        <div class="login-content">
+            <form action="/Usuarios/Auth" method="POST">
+                <div class="img-textos">
+                    <a href="/Home/Index" style="display:inline-block">
+                    <img src="~/assets/img/DW.svg" alt="icono dw">
+                    </a>
+                    <h3 class="title">¡Bienvenido/a!</h3>
+                    <h6 class="msg-info">Ingrese su cuenta:</h6>
+                </div>
+                <div class="input-div one">
+
+                    <div class="form-group">
+                        <input class="input" id="mail" type="text" name="mail" id="form1Example13" placeholder="Ingrese su correo electrónico." class="form-control">
+
+                    </div>
+
+                </div>
+                <div class="input-div pass">
+                    <div class="form-group">
+                        <input class="input" id="password" type="password" name="password" id="form1Example23" placeholder="Ingrese su contraseña." class="form-control">
+                    </div>
+                </div>
+
+                <span id="rellenar" style="color:red; font-weight:bold"></span>
+                <button class="btn bg-gradient text-white pointer-event" style="background-color: #ef6603" id="submit" type="submit">Iniciar sesión</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="~/assets/js/Usuarios/login.js"></script>
+
+</section>
+
+@*CODIGO VIEJO*@
+@*<div class="container px-4 py-5 mx-auto">
         <div class="container">
             <div class="d-flex flex-lg-row flex-column-reverse">
                 <div class="card card1 mx-auto">
                     <div class="row justify-content-center my-auto">
                         <form action="/Usuarios/Auth" method="POST" class="col-md-8 col-10 my-5">
-                            
-                                <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="~/assets/img/logo_dw1.svg"> </div>
-                                <h3 class="mb-5 text-center heading">¡Bienvenido/a!</h3>
-                                <h6 class="msg-info">Ingrese su cuenta:</h6>
-                                <div class="form-group">
 
-                                    <label class="form-control-label text-muted" for="form1Example13">Correo:</label>
-                                    <input id="mail" type="text" name="mail" id="form1Example13" placeholder="Ingrese su correo electrónico." class="form-control">
+                            <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="~/assets/img/logo_dw1.svg"> </div>
+                            <h3 class="mb-5 text-center heading">¡Bienvenido/a!</h3>
+                            <h6 class="msg-info">Ingrese su cuenta:</h6>
+                            <div class="form-group">
 
-                                </div>
-                                <div class="form-group">
+                                <label class="form-control-label text-muted" for="form1Example13">Correo:</label>
+                                <input id="mail" type="text" name="mail" id="form1Example13" placeholder="Ingrese su correo electrónico." class="form-control">
 
-                                    <label class="form-control-label text-muted">Password</label>
-                                    <input id="password" type="password" name="password" id="form1Example23" placeholder="Ingrese su contraseña." class="form-control">
+                            </div>
+                            <div class="form-group">
 
-                                </div>
+                                <label class="form-control-label text-muted">Password</label>
+                                <input id="password" type="password" name="password" id="form1Example23" placeholder="Ingrese su contraseña." class="form-control">
 
-                                <div class="row justify-content-center my-3 px-3">
-                                    <button class="btn bg-gradient text-white pointer-event" style="background-color: #ef6603" id="submit" type="submit">Iniciar sesión</button>
-                                    <br />
-                                    <span id="rellenar" style="color:red; font-weight:bold"></span>
-                                </div>
-                            </form>
+                            </div>
+
+                            <div class="row justify-content-center my-3 px-3">
+                                <button class="btn bg-gradient text-white pointer-event" style="background-color: #ef6603" id="submit" type="submit">Iniciar sesión</button>
+                                <br />
+                                <span id="rellenar" style="color:red; font-weight:bold"></span>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-                    <script src="~/assets/js/Usuarios/login.js"></script>
-
-</section>
+    </div>*@

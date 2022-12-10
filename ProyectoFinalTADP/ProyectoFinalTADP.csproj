@@ -174,19 +174,20 @@
     <Content Include="assets\css\Usuarios\login.css" />
     <Content Include="assets\css\Usuarios\gestionUsuario.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\bg-fondo1.jpg" />
+    <Content Include="assets\img\bg-fondo2.jpg" />
+    <Content Include="assets\img\Daily.web.svg" />
     <Content Include="assets\img\descarga.png" />
+    <Content Include="assets\img\DW.svg" />
     <Content Include="assets\img\favicon.png" />
     <Content Include="assets\img\features-1.png" />
     <Content Include="assets\img\features-2.png" />
     <Content Include="assets\img\features-3.png" />
     <Content Include="assets\img\features-4.png" />
-    <Content Include="assets\img\fondoit.jpg" />
-    <Content Include="assets\img\fotologin.png" />
+    <Content Include="assets\img\icono-login.png" />
     <Content Include="assets\img\icono_daily.web.svg" />
-    <Content Include="assets\img\icono_dw.svg" />
     <Content Include="assets\img\icono_volver.svg" />
     <Content Include="assets\img\img_inicio.svg" />
-    <Content Include="assets\img\logo_dw.svg" />
     <Content Include="assets\img\logo_dw1.svg" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
@@ -209,6 +210,8 @@
     <Content Include="assets\img\testimonials\testimonials-3.jpg" />
     <Content Include="assets\img\testimonials\testimonials-4.jpg" />
     <Content Include="assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="assets\img\wave.svg" />
+    <Content Include="assets\img\waves-fondo.svg" />
     <Content Include="assets\js\jquery-3.6.1.min.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\Usuarios\delete-conf.js" />
@@ -382,7 +385,7 @@
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
