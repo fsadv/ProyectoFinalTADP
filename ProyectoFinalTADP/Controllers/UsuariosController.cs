@@ -135,10 +135,7 @@ namespace ProyectoFinalTADP.Controllers
         public ActionResult Create()
         {
             return View(new Usuario());
-        }
-
-
-
+        }         
 
 
         public ActionResult Edit(int id)
@@ -149,7 +146,9 @@ namespace ProyectoFinalTADP.Controllers
             return View(usuario);
         }
 
+        #endregion
 
+        #region Método DELETE
 
         public ActionResult Delete(int id)
         {
@@ -157,13 +156,13 @@ namespace ProyectoFinalTADP.Controllers
             return RedirectToAction("Index");
         }
 
-
-
-
         #endregion
 
 
-        #region Métodos privados (Helpers)
+
+
+
+        #region Métodos privados
 
         private string GenerarBody(string email, string message)
         {
