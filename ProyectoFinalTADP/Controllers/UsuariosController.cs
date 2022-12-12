@@ -148,6 +148,7 @@ namespace ProyectoFinalTADP.Controllers
 
         #endregion
 
+        /*
         #region Método DELETE
 
         public ActionResult Delete(int id)
@@ -159,7 +160,7 @@ namespace ProyectoFinalTADP.Controllers
         #endregion
 
 
-
+        */
 
 
         #region Métodos privados
