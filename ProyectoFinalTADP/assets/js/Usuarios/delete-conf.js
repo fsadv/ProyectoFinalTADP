@@ -1,7 +1,14 @@
 ﻿$(document).ready(function () {
 
+
     
     $('.delete-conf').click((event) => {
+
+        const targetUrl = event.delegateTarget.href;
+        const targetArray = targetUrl.split('/');
+        const idToDelete = targetArray[targetArray.length - 1];
+        const url = 'https://636c31077f47ef51e143fcb9.mockapi.io/Usuarios/' + idToDelete;
+        
 
         event.preventDefault();
 
@@ -16,11 +23,19 @@
             cancelButtonText: 'No, regresar'
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire(
-                    'Eliminado!',
-                    'El usuario fue eliminado.',
-                    'success'
-                )
+
+                $.ajax({
+                    url: url,
+                    type: 'DELETE',
+                    success: function (result) {
+                        Swal.fire(
+                            'Eliminado!',
+                            'El usuario fue eliminado.',
+                            'success'
+                        );
+                    }
+                });
+               
             }
         })
     
