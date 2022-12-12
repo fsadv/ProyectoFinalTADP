@@ -214,6 +214,7 @@
     <Content Include="assets\img\waves-fondo.svg" />
     <Content Include="assets\js\jquery-3.6.1.min.js" />
     <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\Usuarios\create-user.js" />
     <Content Include="assets\js\Usuarios\delete-conf.js" />
     <Content Include="assets\js\Usuarios\login.js" />
     <Content Include="assets\scss\Readme.txt" />
