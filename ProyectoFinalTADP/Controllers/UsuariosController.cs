@@ -148,21 +148,7 @@ namespace ProyectoFinalTADP.Controllers
 
         #endregion
 
-        /*
-        #region Método DELETE
-
-        public ActionResult Delete(int id)
-        {
-            string listUsuariosJson = new Servicios.Rest(ConfigurationManager.AppSettings["UrlServicios"] + "Usuarios" + "/" + id, id.ToString(), "DELETE").CreateObject();
-            return RedirectToAction("Index");
-        }
-
-        #endregion
-
-
-        */
-
-
+     
         #region Métodos privados
 
         private string GenerarBody(string email, string message)
